@@ -63,7 +63,7 @@ void checkWhoWon(char array[7][7]){
 int checkWin(char array[7][7]){
     int i, j = 0;
     int end;
-            while(array[i][j] != 0){
+            while((i >= 0 && i < 7) && (j >= 0 && j <7)){
                 // TODO: Spieler1
                     //complete first line - Spieler1
                     if((array[1][1] == 'o')&&(array[1][3] == 'o')&&(array[1][5] == 'o')
