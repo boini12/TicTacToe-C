@@ -63,7 +63,8 @@ void checkWhoWon(char array[7][7]){
 int checkWin(char array[7][7]){
     int i, j = 0;
     int end;
-            while((i >= 0 && i < 7) && (j >= 0 && j <7)){
+            for(i = 0; i <7 ; i++){
+                for(j= 0; j<7; j++){
                 // TODO: Spieler1
                     //complete first line - Spieler1
                     if((array[1][1] == 'o')&&(array[1][3] == 'o')&&(array[1][5] == 'o')
@@ -103,8 +104,7 @@ int checkWin(char array[7][7]){
                 }else{
                     end = 0;
                 }
-                i++;
-                j++; 
+                }
              }
            return end;
         }
@@ -137,7 +137,7 @@ int main(){
 //Ausgabe Des Spieltitels
 Titel();
 //Ausgabe des arrays
-printf("array:\n");
+printf("Spielfeld:\n");
     for(i=0; i<7; i++){
         for(j=0; j<7; j++){
             printf("%c ", Vorlage[i][j]);
